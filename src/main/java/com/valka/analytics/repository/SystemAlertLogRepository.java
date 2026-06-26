@@ -6,6 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SystemAlarmLogRepository extends MongoRepository<SystemAlertLog, String> {
+public interface SystemAlertLogRepository extends MongoRepository<SystemAlertLog, String> {
     Page<SystemAlertLog> findBySeverity(String severity);
 }
