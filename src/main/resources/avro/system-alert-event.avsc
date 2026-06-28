@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "SystemAlertEvent",
+  "namespace": "com.valka.analytics.model.event",
+  "fields": [
+    { "name": "severity", "type": "string" },
+    { "name": "serviceName", "type": "string" },
+    { "name": "message", "type": "string" },
+    {
+      "name": "traceId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}

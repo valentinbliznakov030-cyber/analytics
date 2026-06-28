@@ -1,0 +1,42 @@
+{
+  "type": "record",
+  "name": "UserActivityEvent",
+  "namespace": "com.valka.analytics.model.event",
+  "fields": [
+    { "name": "userId", "type": "string" },
+    { "name": "action", "type": "string" },
+    {
+      "name": "resourceId",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "createdAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "deviceDetails",
+      "type": {
+        "type": "record",
+        "name": "AvroDeviceDetails",
+        "fields": [
+          { "name": "os",
+            "type": ["null", "string"],
+            "default": null
+          },
+          {
+            "name": "browser",
+            "type": ["null", "string"],
+            "default": null },
+          {
+            "name": "ipAddress",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
