@@ -23,4 +23,6 @@ public class SystemAlertLog {
     private String traceId;
 
     private Instant timestamp;
+
+    private String aiAnalysis;
 }
